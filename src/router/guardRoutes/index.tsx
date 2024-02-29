@@ -14,10 +14,10 @@ const DefaultRoute = '/dashboard/workplace';
 const Routes = [...DashboardRoutes];
 
 const getRoutes = () => {
-  let AllRoutes = [];
+  let AllRoutes: IRoute[] = [];
 
-  const BaseRoutes: any[] = [];
-  const BlankRoutes: any[] = [];
+  const BaseRoutes: IRoute[] = [];
+  const BlankRoutes: IRoute[] = [];
   if (Routes && Routes.length) {
     Routes.forEach((route) => {
       route.element = <GuardRoute>{route.element}</GuardRoute>;
